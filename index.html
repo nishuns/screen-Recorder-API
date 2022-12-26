@@ -1,0 +1,66 @@
+<!-- Create a Simple HTML template without much styling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Recorder API</title>
+    <style>
+
+        body {
+            width: 100%;
+        }
+
+        .recorder__preview-container {
+            width: 100%;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .recorder__controls {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .recorder__btn {
+            border: none;
+            padding: .6rem 2rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            background: rgb(179, 247, 123);
+            cursor: pointer;
+        }
+        .recorder__btn:hover {
+            background: rgb(154, 240, 84);
+        }
+
+        .recording {
+            color: red;
+        }
+        
+        .recorded {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="recorder__controls">
+        <button class="recorder__btn" id="recorder-start">Start Recording</button>
+        <div class="recorder__status" id="recorder-status">
+            Recording hasn't started Yet
+        </div>
+        <button class="recorder__btn" id="recorder-stop">Stop Recording</button>
+    </div>
+    <div class="recorder__preview-container">
+        <video src="" class="recorder__preview" id="preview" width="576" controls></video>
+    </div>
+
+    <script src="./screen-recorder-api.js" type="module"></script>
+</body>
+</html>
